@@ -48,6 +48,14 @@ public class City implements Serializable {
 	protected City() {
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
+
 	public City(String name, String country) {
 		super();
 		this.name = name;
@@ -72,6 +80,6 @@ public class City implements Serializable {
 
 	@Override
 	public String toString() {
-		return getName() + "," + getState() + "," + getCountry();
+		return getId() + "," + getName() + "," + getState() + "," + getCountry() + ", [" + getMap() + "]";
 	}
 }
